@@ -9,9 +9,18 @@ DEPENDS += "wayland libxkbcommon"
 
 SRC_URI = " \
     gitsm://git@github.com/phytec/demo-lvgl;branch=main;protocol=https \
+    file://lvgl-demo-wl.service \
 "
 SRCREV = "be5ee134a6473ca79efd17e212f88a3046796f79"
 
 S = "${WORKDIR}/git"
 
-inherit cmake
+inherit cmake systemd
+
+SYSTEMD_SERVICE_${PN} = "lvgl-demo-wl.service"
+
+FILES_${PN} += "${systemd_unitdir}"
+
+do_install_append() {
+    install -Dm 0644 ${WORKDIR}/lvgl-demo-wl.service ${D}${systemd_system_unitdir}/lvgl-demo-wl.service
+}
