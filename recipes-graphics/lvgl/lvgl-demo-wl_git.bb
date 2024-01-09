@@ -17,10 +17,10 @@ S = "${WORKDIR}/git"
 
 inherit cmake systemd
 
-SYSTEMD_SERVICE_${PN} = "lvgl-demo-wl.service"
+SYSTEMD_SERVICE:${PN} = "lvgl-demo-wl.service"
 
-FILES_${PN} += "${systemd_unitdir}"
+FILES:${PN} += "${systemd_unitdir}"
 
-do_install_append() {
+do_install:append() {
     install -Dm 0644 ${WORKDIR}/lvgl-demo-wl.service ${D}${systemd_system_unitdir}/lvgl-demo-wl.service
 }
