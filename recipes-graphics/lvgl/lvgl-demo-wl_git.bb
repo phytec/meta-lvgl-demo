@@ -2,7 +2,7 @@ SUMMARY = "LVGL demo application"
 DESCRIPTION = "Recipe for a LVGL demo application based on the LVGL widgets demo"
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = " \
-    file://${COMMON_LICENSE_DIR}/MIT;md5=0835ade698e0bcf8506ecda2f7b4f302 \
+    file://${S}/LICENSE;md5=802d3d83ae80ef5f343050bf96cce3a4 \
 "
 
 DEPENDS += "wayland libxkbcommon"
