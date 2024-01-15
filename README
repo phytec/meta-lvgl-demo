@@ -5,7 +5,7 @@ This layer provides a recipe for a LVGL demo application.
 Tested with:
 	- PB-03123-001.A1 phyBOARD-Pollux Development Kit
 	- PHYTEC's BSP-Yocto-NXP-i.MX8MP-PD23.1.0 Linux Board Support Package as a base
-	- KPB-AV-010-100 LCD Display Add-On w/ Touch (LVGL demo will start on HDMI but i
+	- KPB-AV-010-100 LCD Display Add-On w/ Touch (LVGL demo will start on HDMI but
 	  touch/mouse interaction won't work as expected unless using touch display.)
 
 Steps to enable:
