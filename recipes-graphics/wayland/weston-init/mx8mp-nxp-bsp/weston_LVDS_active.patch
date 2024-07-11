@@ -1,0 +1,16 @@
+--- a/weston.ini
++++ b/weston.ini
+@@ -15,11 +15,11 @@ idle-time=0
+ 
+ [output]
+ name=HDMI-A-1
+-mode=current
++mode=off
+ 
+ [output]
+ name=LVDS-1
+-mode=off
++mode=current
+ 
+ #[output]
+ #name=HDMI-A-2
