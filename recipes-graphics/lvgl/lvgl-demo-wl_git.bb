@@ -26,6 +26,7 @@ inherit cmake pkgconfig systemd
 SYSTEMD_SERVICE:${PN} = "lvgl-demo-wl.service"
 
 FILES:${PN} += "${systemd_unitdir}"
+EXTRA_OECMAKE = "-DSYSROOT=${RECIPE_SYSROOT}"
 
 do_install:append() {
     install -Dm 0644 ${WORKDIR}/lvgl-demo-wl.service ${D}${systemd_system_unitdir}/lvgl-demo-wl.service
