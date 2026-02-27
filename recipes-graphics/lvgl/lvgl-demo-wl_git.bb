@@ -5,7 +5,13 @@ LIC_FILES_CHKSUM = " \
     file://${S}/LICENSE;md5=802d3d83ae80ef5f343050bf96cce3a4 \
 "
 
-DEPENDS += "wayland libxkbcommon"
+DEPENDS += " \
+    wayland \
+    wayland-protocols \
+    wayland-native \
+    libxkbcommon \
+    python3-pcpp-native \
+"
 
 SRC_URI = " \
     gitsm://git@github.com/phytec/demo-lvgl;branch=main;protocol=https \
