@@ -21,7 +21,7 @@ SRCREV = "be5ee134a6473ca79efd17e212f88a3046796f79"
 
 S = "${WORKDIR}/git"
 
-inherit cmake systemd
+inherit cmake pkgconfig systemd
 
 SYSTEMD_SERVICE:${PN} = "lvgl-demo-wl.service"
 
