@@ -8,7 +8,7 @@ Type=simple
 User=root
 Restart=on-failure
 RestartSec=1
-Environment="XDG_RUNTIME_DIR=/run/user/0"
+Environment=WAYLAND_DISPLAY="/run/wayland-0" XDG_RUNTIME_DIR=/run/user/0
 ExecStart=/usr/bin/lvgl-demo-wl
 
 [Install]
