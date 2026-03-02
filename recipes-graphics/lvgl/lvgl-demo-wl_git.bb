@@ -17,7 +17,7 @@ SRC_URI = " \
     gitsm://git@github.com/phytec/demo-lvgl;branch=main;protocol=https \
     file://lvgl-demo-wl.service \
 "
-SRCREV = "be5ee134a6473ca79efd17e212f88a3046796f79"
+SRCREV = "b97cd50433e6516d95f8a47570473304ce6110c6"
 
 S = "${WORKDIR}/git"
 
