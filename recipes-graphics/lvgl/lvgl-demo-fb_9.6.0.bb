@@ -10,12 +10,12 @@ DEPENDS = "python3-pcpp-native"
 PV .= "+git"
 
 SRC_URI = "\
-    git://github.com/lvgl/lv_port_linux_frame_buffer.git;protocol=https;branch=release/v9.5;name=demo \
-    git://github.com/lvgl/lvgl;protocol=https;branch=release/v9.5;tag=v9.5.0;name=lvgl;subdir=git/lvgl \
+    git://github.com/lvgl/lv_port_linux_frame_buffer.git;protocol=https;branch=release/v9.6;name=demo \
+    git://github.com/lvgl/lvgl;protocol=https;branch=release/v9.6;name=lvgl;subdir=git/lvgl \
 "
 
-SRCREV_demo = "045137cf0fa1781483cb796261a11b5eb21e99d9"
-SRCREV_lvgl = "85aa60d18b3d5e5588d7b247abf90198f07c8a63"
+SRCREV_demo = "0728bc4eff0ff85ef787db3f557a654c5c7c9c41"
+SRCREV_lvgl = "80ca777e37a2b176770726a02e07a6fb79ef0b39"
 SRCREV_FORMAT = "demo_lvgl"
 # The version check runs against the first SRC_URI (the demo repo), whose tags
 # are "vX.Y.Z" but top out at v9.2.2 -- below PV 9.5.0+git, which follows the
@@ -29,8 +29,6 @@ inherit cmake pkgconfig
 S = "${WORKDIR}/git"
 
 require lv-conf.inc
-
-KCONFIG_CONFIG_ROOTDIR = "${S}/lvgl"
 
 do_install() {
     install -d ${D}${bindir}
