@@ -1,0 +1,31 @@
+From ebed67546b865585233bc6ddf85c7ea073aaf5b3 Mon Sep 17 00:00:00 2001
+From: Thorsten Schmelzer <t.schmelzer@phytec.de>
+Date: Tue, 22 Sep 2026 14:22:18 +0200
+Subject: [PATCH] feat: add option to start benchmark demo
+
+If enabled by the configuration run benchmark demo instead of regular
+widget demo.
+
+Upstream-Status: Pending
+
+Signed-off-by: Thorsten Schmelzer <t.schmelzer@phytec.de>
+---
+ src/main.c | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+
+diff --git a/src/main.c b/src/main.c
+index b008ade697b2..77943022084b 100644
+--- a/src/main.c
++++ b/src/main.c
+@@ -187,7 +187,10 @@ int main(int argc, char ** argv)
+         model_path = "3d/lvgl_logo.glb";
+     }
+     lv_demo_gltf(model_path);
+-#elif LV_BUILD_DEMOS
++#elif LV_USE_DEMO_BENCHMARK
++    /*Run benchmark*/
++    lv_demo_benchmark();
++#elif LV_USE_DEMO_WIDGETS
+     /*Create a Demo*/
+     lv_demo_widgets();
+     lv_demo_widgets_start_slideshow();

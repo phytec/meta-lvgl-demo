@@ -4,9 +4,13 @@ PACKAGECONFIG = "wayland"
 
 DEPENDS:append:imxgpu3d = "libdrm virtual/libgbm"
 
+PACKAGECONFIG[benchmark] = ",,"
+
 inherit systemd
 
 SRC_URI += "file://lvgl-demo-fb.service \
+            file://0001-feat-add-option-to-start-benchmark-demo.patch \
+            ${@bb.utils.contains('PACKAGECONFIG', 'benchmark', 'file://benchmark.cfg', '', d)} \
            "
 
 SYSTEMD_SERVICE:${PN} = "lvgl-demo-fb.service"
