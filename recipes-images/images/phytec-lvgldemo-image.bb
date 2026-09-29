@@ -18,5 +18,5 @@ IMAGE_INSTALL += "\
     packagegroup-gstreamer \
     \
     weston weston-init \
-    weston-xwayland \
+    lvgl-demo-fb \
 "
