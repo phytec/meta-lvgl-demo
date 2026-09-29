@@ -19,5 +19,4 @@ IMAGE_INSTALL += "\
     \
     weston weston-init \
     weston-xwayland \
-    lvgl-demo-wl \
 "
